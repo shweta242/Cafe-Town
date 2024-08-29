@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Town</title>
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppims", sans-serif;
+}
+:root {
+   --background-color: #080808;
+    --second-bg-color:#131313;
+    --text-color: white;
+    --main-color:#00ffee;
+}
+body{
+    width: 100%;
+    height: 500%;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+
+}
+span{
+    color: var(--main-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    padding: 2rem 8% 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    text-shadow: 0 0 25px var(--main-color);
+}
+.navbar a{
+    font: size 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transform: 0.3S ease;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem ;
+    margin-top: -9rem;
+    font-size: 3.5rem;
+    margin-left: 50px;
+}
+.home-content h1{
+    font-size: 5rem;
+    font-weight:100rem;
+    margin-top:3 rem;
+    line-height: 5;
+    margin-left: 50px;
+}
+
+h3 {
+            color: white;
+            font-size: large;
+            margin-top: 20px;
+        }
+        h2 {
+            color: white;
+            margin-top: 150px;
+        }
+        .maindiv {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            text-align: center;
+        }
+        .maindiv img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+.left, .right {
+            flex: 1;
+            min-width: 300px;
+        }
+.print {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 110px;
+            gap: 20px;
+        }
+#menu, #order {
+            width: 100%;
+            max-width: 500px;
+            border: solid 2px white;
+            background-color: transparent;
+            border-radius: 15px;
+            color: rgb(234, 238, 237);
+            padding: 15px;
+        }
+        #div1, #div2 {
+            color: white;
+        }
+        .order-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .order-item input[type="number"] {
+            width: 60px;
+        }
+        .nav-link.highlighted {
+            background-color: #a4b6eb; 
+            color: white !important; 
+            border-radius: 5px;
+        }
+        .top{
+            position: fixed;
+        }
+        .bottom {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            margin-right: 500px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: -10 px;
+        }
+
+        #food1,
+        #food2,#food3,#food4 {
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        #food1 {
+            background-image: url("C:\Users\Dell\Desktop\food\Cafe-Town\food1.jpg");
+        }
+
+        #food2 {
+            background-image: url("C:\Users\Dell\Desktop\food\Cafe-Town\food.jpg");
+        }
+        
+        .social-icons a{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid yellow;
+    font-size: 2rem;
+    border-radius: 20%;
+    color: var(--main-color);
+    margin: 1rem 1rem 1rem 0;
+    transition: 0.3s ease-in-out;margin-left:50px;
+}
+#aa{
+    margin-left: 400px;
+}
+#a{
+    margin-top: 2px;
+    color: #080808;
+    margin-left: 50px;
+}
+.services {
+    background: var(--background-color);
+    color: black;
+}
+.services h2{
+    margin-bottom: 5rem; 
+    color: white;
+}
+.services-container{
+    display:grid; margin-top: 5rem;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.service-box{
+    background-color: var(--main-color);
+    height: 300px; 
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer; 
+    transition: 0.4s ease-in-out;
+}
+.service-box:hover{
+    background: white;
+    color:black;
+    border: 5px solid var(--main-color);margin-bottom: 2rem;
+    transform :scale(1.03);
+}
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 20px;
+    justify-content: left;
+    align-items: baseline ;
+    padding: 2rem 2rem;
+}
+.service-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+.service-info p{
+    font-size: 1rem;
+    font-weight: 200;
+    max-height: 50px;
+    line-height: 1.7;
+    margin: auto;
+}
+#b{
+    text-align: center;
+}                             
+#co{
+    margin-left: 500px;
+    color: white;
+    margin-right: auto;
+}
+hr{
+            color: white;
+        }
+        #pawan{
+            text-align: center;
+        }
+        #contact,#m{
+            color: darkorange;
+            margin-left: 650px;
+
+        }
+        #tt{
+            color: antiquewhite;
+            margin-right: -550px;
+            ;;
+        }
+   #ka{
+    color:crimson;
+    font-weight: bold;
+   }
+   #kl{
+    color: #e0a9a9;font-weight: bold;
+}
+   
+
+    </style>
+</head>
+<body background="C:\Users\Dell\Downloads\bg.jpg">
+    <header class="header"> 
+        <a href="#home" class="logo">Cafe-
+            <span>Town</span>
+        </a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About us</a>
+            <a href="#Contact">Contact</a>
+            
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Are You <span>Hungry? </span></h1>
+            <h3 class="text-animation">Don't Wait<span></span></h3>
+            <h2 id="a">Let’s start to order food now</h2>
+            
+            
+            
+        </div>
+        
+    </section><br><br>
+    <div class="bottom">
+        <div class="menu">
+            <div id="food1"></div>
+            <div id="food2"></div>
+            <div id="food3"></div>
+            <div id="food4"></div>
+        </div>
+    </div><br><br>
+    <div class="container print" id="menu">
+        <div id="menu">
+            <form>
+                <h1 id="b"><span>Menu</span>
+                    
+                </h1><br>
+                <hr><br>
+                <ul id="menu-items">
+                    <li class="order-item">
+                        
+                        <input type="checkbox" id="c1">Tea @Rs- 20
+                        <input type="number" id="q1" min="0" disabled>
+                    </li>
+                    <li class="order-item">
+                       
+                        <input type="checkbox" id="c2">Coffee @Rs- 60
+                        <input type="number" id="q2" min="0" disabled>
+                    </li>
+                    <li class="order-item">
+                       
+                        <input type="checkbox" id="c3"> Burger @Rs- 99
+                        <input type="number" id="q3" min="0" disabled>
+                    </li>
+                    <li class="order-item">
+                        
+                        <input type="checkbox" id="c4">Pizza @Rs- 299
+                        <input type="number" id="q4" min="0" disabled>
+                    </li>
+                    <li class="order-item">
+                        
+                        <input type="checkbox" id="c5">Water @Rs- 20
+                        <input type="number" id="q5" min="0" disabled>
+                    </li>
+                    <li class="order-item">
+                        
+                        <input type="checkbox" id="c6">Ice-Cream @Rs- 50
+                        <input type="number" id="q6" min="0" disabled>
+                    </li>
+                   
+                    <input type="button" value="Clear All" onclick="clearAll()">
+                    <input type="button" value="Print Receipt" onclick="printReceipt()">
+                </ul>
+                <div id="div1"></div>
+            </form>
+            </div>
+           
+            <div id="order">
+                <h1 id="b"><span>You'r Order Summary</span></h1><br>
+                <hr><br>
+                <div id="div2">  Totall Bill: Rs.0.00 </div>
+            </div>
+          </div><br><br><br>  
+       
+          <section class="about" id="about">
+            <h1 class="heading" id="b"><span>About us</span></h1><hr>
+    
+            <div class="services-container">
+                <div class="service-box">
+                    <div class="service-info">
+                        <h4><h4><span>CHEF</span>-CRAFTED FAST <span>FOOD</span> FOR THE FUTURE.</h4></h4>
+                        <p>CAFE-VINTAGE is dedicated to serving the best food on the planet, and for the planet!
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="service-box">
+                    <div class="service-info">
+                        <h4> <span>How</span> We Do It</h4>
+                        <p> At Cafe Vintage, we believe in more than just serving food; we offer an unforgettable dining experience. Nestled in the heart of Pune, our restaurant combines a cozy atmosphere with a menu crafted from the finest local ingredients. Whether you’re here for a casual meal with friends or a special celebration, we promise a memorable experience with exceptional service and delectable dishes.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="Contact my-5" id="Contact">
+                    <div class="container">
+                      <div class="text-center my-6">
+                      <h1 id="contact"><span>Contact</span></h1><br><br>
+                      <hr  class="w-25 m-auto">
+                      </div>
+                      <div class="row"id="tt">
+                    <p id="pawan" class="co">We’d love to hear from you! Whether you have questions, 
+                        feedback, or just want to say hello, feel free to reach out to us.<br>
+                
+                     <span>Cafe Town</span><br>
+                     123 Main Street,<br>
+                     Pune, Maharastra, 411033 .<br><br><br>
+                
+                     <span id="ka">Phone:</span> (123) 456-7890<br><br><br>
+                     <span id="ka">Email:</span>contact@cafetown.com<br><br><BR>
+                
+                     <span>Business Hours:</span><br>
+                     <span id="kl">Monday - Friday:</span> 8:00 AM - 8:00 PM<br>
+                     <span id="kl">Saturday - Sunday:</span> 9:00 AM - 10:00 PM<br><br><br>
+                
+                     <span>Follow Us on Social Media:</span><br>
+                     LinkedIn | Github | Instagram | Twitter</p>
+                     <div class="social-icons" id="aa">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-github' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                       
+                      </div>
+                    </div>
+                  
+                
+                </section>
+                
+            
+    
+                
+        
+        
+  
+
+        <script>
+            let food1s = document.getElementById('food1');
+            let food2s = document.getElementById('food2');
+            let foods = document.getElementById('food');
+    
+            food1s.addEventListener('click', () => {
+                foods.style.backgroundImage = "url('C:/Users/Dell/Desktop/food.jpg')";
+            });
+    
+            food2s.addEventListener('click', () => {
+                foods.style.backgroundImage = "url('C:/Users/Dell/Desktop/food1.jpg')";
+            });
+    
+            function bill() {
+                var total = 0,
+                    orderSummary = "";
+    
+                var items = [
+                    { cId: "c1", qtyId: "q1", name: "Tea", price: 20},
+                    { cId: "c2", qtyId: "q2", name: "Coffee", price: 60},
+                    { cId: "c3", qtyId: "q3", name: "Burger", price: 99},
+                    { cId: "c4", qtyId: "q4", name: "Pizza", price: 299},
+                    { cId: "c5", qtyId: "q5", name: "Water", price: 20},
+                    { cId:"c6", qtyId: "q6", name: "Ice-Cream", price:50}
+                ];
+    
+                items.forEach(function(item) {
+                    var checkbox = document.getElementById(item.cId);
+                    var qtyInput = document.getElementById(item.qtyId);
+                    var qty = parseInt(qtyInput.value);
+    
+                    if (checkbox.checked && qty > 0) {
+                        orderSummary += "  \t<li> " + item.name + " x " + qty + " = Rs. " + (qty * item.price) + "</li>";
+                        total += qty * item.price;
+                    }
+                });
+    
+                if (orderSummary === "") {
+                    orderSummary = "<li>No items ordered yet.</li>";
+                }
+    
+                document.getElementById("order").innerHTML = "<h1>Your Order:</h1><br><ul>" + orderSummary + "</ul><br>Total: Rs. " + total;
+                document.getElementById("order").style.color = "white";
+                document.getElementById("div2").innerHTML = "Total Bill: Rs. " + total;
+            }
+    
+            function printReceipt() {
+                var divContent = document.getElementById("order").innerHTML;
+                if (divContent) {
+                    var printWindow = window.open('', '', 'height=400,width=600');
+                    printWindow.document.write('<html><head><title>Receipt</title>');
+                    printWindow.document.write('</head><body>');
+                    printWindow.document.write('<h1>Food Bill</h1><hr>');
+                    printWindow.document.write(divContent);
+                    printWindow.document.write('</body></html>');
+                    printWindow.document.close();
+                    printWindow.print();
+                } else {
+                    alert("Please place an order first");
+                }
+            }
+    
+            function clearAll() {
+                document.querySelector('form').reset();
+                document.getElementById("order").innerHTML = '<h1>Your Order Summary</h1><hr><div id="div2">Total Bill: Rs. 0.00</div>';
+            }
+            
+            document.querySelectorAll('#menu input[type="checkbox"]').forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    var qtyInput = document.getElementById(this.id.replace('c', 'q'));
+                    qtyInput.disabled = !this.checked;
+                    if (!this.checked) {
+                        qtyInput.value = 0;
+                    }
+                });
+            });
+    
+            document.querySelectorAll('#menu input[type="number"]').forEach(function(input) {
+                input.addEventListener('input', function() {
+                    bill();
+                });
+            });
+    
+            
+            function setActiveMenu() {
+               
+                var menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                
+                menuLinks.forEach(function(link) {
+                    link.classList.remove('highlighted');
+                });
+                
+                var menuLink = document.querySelector('#a[href="#ordermenu"]');
+                if (menuLink) {
+                    menuLink.classList.add('highlighted');
+                }
+            }
+    
+          
+            document.addEventListener('DOMContentLoaded', function() {
+                setActiveMenu();
+            });
+    
+            
+            window.addEventListener('scroll', function() {
+                var scrollPos = window.scrollY;
+                var menuLink = document.querySelector('#a[href="#menu"]');
+                if (scrollPos > document.getElementById('menu').offsetTop - 50) {
+                    setActiveMenu();
+                } else {
+                    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+                        link.classList.remove('highlighted');
+                    });
+                }
+            });
+    
+            
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    
+                    var navbarToggler = document.querySelector('.navbar-toggler');
+                    var navbarCollapse = document.querySelector('#navbarSupportedContent');
+                    if (navbarToggler && navbarCollapse) {
+                        var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
+                });
+            });
+    
+            
+            window.addEventListener('hashchange', function() {
+                setActiveMenu();
+            });
+        </script>
+    </body>
+    </html>
